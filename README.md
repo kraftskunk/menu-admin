@@ -1,5 +1,5 @@
 # Menu-Admin
-_Streamline your Linux server tasks with a clean, no‑nonsense menu script.__
+_Streamline your Linux server tasks with a clean, menu script.__
 
 ---
 
@@ -19,11 +19,11 @@ where it belongs: with the user.
 
 ## ✨ Features
 
-- Modular design: easily extend with new commands or modules
+- Modular design: easily extend with new commands (=scripts)
 - Dynamic discovery of available scripts and functions
-- Robust error handling (`set -euo pipefail`) for reliability
+- Error handling (`set -euo pipefail`) for reliability
 - Simple, text‑based interface for quick navigation
-- Lightweight—no external dependencies beyond Bash
+- Lightweight, and no external dependencies beyond Bash
 
 ---
 
@@ -41,7 +41,7 @@ where it belongs: with the user.
    chmod +x menu.sh
    ```
 3. Run it:
-   ```bash
+   ```
    ./menu.sh
    ```
 
@@ -51,14 +51,14 @@ where it belongs: with the user.
 
 - Launch the script to see the interactive menu
 - Navigate options with keyboard input
-- Add your own scripts by dropping them into the `scripts` folder
+- Add your own scripts by dropping them into the `commands` folder
 
 ---
 
 ## 🔧 Configuration
 
 - Config files live in `lib/`
-- Add new menu items by creating scripts in the `scripts/` folder
+- Add new menu items by creating scripts in the `commands/` folder
 - Each module should follow the same function naming convention for consistency
 
 ---
