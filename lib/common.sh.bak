@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+cleanup() { :; }
+trap cleanup EXIT
+
+# Set email to receive reports here
+# If it's an external email, that implies a working sendmai, postfix, exim or other
+# mail server. Otherwise, use a system user name.
+# --
+SUPERVISION_EMAIL="root"
+
+# Do not change after this point
+# --
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_FILE="$SCRIPT_DIR/../script.log"
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
+}
